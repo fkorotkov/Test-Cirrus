@@ -14,7 +14,7 @@ mac_task:
     - export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
     - which ruby
     - which gem
-    - gem install ronn
+    - gem install --user-install ronn
 
   tests_script:
     - true
