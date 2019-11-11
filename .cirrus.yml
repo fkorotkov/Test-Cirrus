@@ -1,20 +1,15 @@
 mac_task:
-
   matrix:
-
     - name: 🍎 Clang
       osx_instance:
-        image: mojave-xcode-11.1
+        image: mojave-xcode
 
   install_script:
-    - brew install ruby@2.6
     - which ruby
+    - ruby --version
     - which gem
-    - export PATH="/usr/local/opt/ruby/bin:$PATH"
-    - export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
-    - which ruby
-    - which gem
-    - gem install --user-install ronn
+    - gem --version
+    - sudo gem install ronn
 
   tests_script:
     - true
